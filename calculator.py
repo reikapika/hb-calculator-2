@@ -15,6 +15,15 @@ while num != "q": # exit = user inputs "q"
     num = raw_input("> ")
     tokens = num.split(" ") # tokens
     if tokens[0] is "+":
-        return add(int(tokens[1]), int(tokens[2]))
+        print add(int(tokens[1]), int(tokens[2]))
     elif tokens[0] is "-":
-
+        print subtract(int(tokens[1]), int(tokens[2]))
+    elif tokens[0] is "*":
+        print multiply(int(tokens[1]), int(tokens[2]))
+    elif tokens[0] is "/":
+        print divide(int(tokens[1]), int(tokens[2]))
+    elif tokens[0] is "square":
+        print square(int(tokens[1]), int(tokens[2]))
+    elif tokens[0] is "cube":
+        print cube(int(tokens[1]), int(tokens[2]))
+    
