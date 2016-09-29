@@ -7,7 +7,7 @@ def add(*num):
 
 def subtract(*num):
     total = num[0]
-    for d in num:
+    for d in num[1:]:
         total -= d
     return total
 

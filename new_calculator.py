@@ -15,7 +15,7 @@ while num != "q": # exit = user inputs "q"
     num = raw_input("> ")
     tokens = num.split(" ") # tokenization
     identifier = tokens[0]
-    digits = {int(x) for x in tokens[1:]}
+    digits = [int(x) for x in tokens[1:]]
 
     if identifier == "+":
         print add(*digits)
