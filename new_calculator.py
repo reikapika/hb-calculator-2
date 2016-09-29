@@ -13,9 +13,9 @@ from new_arithmetic import *
 num = ""
 while num != "q": # exit = user inputs "q"
     num = raw_input("> ")
-    tokens = num.split(" ") # tokenization
+    tokens = num.split() # tokenization
     identifier = tokens[0]
-    digits = [int(x) for x in tokens[1:]]
+    digits = [int(x) for x in tokens[1:] if x.isdigit()]
 
     if identifier == "+":
         print add(*digits)
@@ -26,7 +26,7 @@ while num != "q": # exit = user inputs "q"
     elif identifier == "/":
         print divide(int(tokens[1]), int(tokens[2]))
     elif identifier == "square":
-        print square(int(tokens[1]))
+        print square(*digits)
     elif identifier == "cube":
         print cube(int(tokens[1]))
     elif identifier == "pow":
