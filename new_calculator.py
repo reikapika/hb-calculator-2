@@ -22,7 +22,7 @@ while num != "q": # exit = user inputs "q"
     elif identifier == "-":
         print subtract(*digits)
     elif identifier == "*":
-        print multiply(int(tokens[1]), int(tokens[2]))
+        print multiply(*digits)
     elif identifier == "/":
         print divide(int(tokens[1]), int(tokens[2]))
     elif identifier == "square":

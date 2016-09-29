@@ -6,14 +6,17 @@ def add(*num):
 
 
 def subtract(*num):
-    total = int()
+    total = num[0]
     for d in num:
         total -= d
     return total
 
 
-def multiply(num1, num2):
-    return num1 * num2
+def multiply(*num):
+    total = 1
+    for d in num:
+        total = d * total
+    return total
 
 
 def divide(num1, num2):
